@@ -705,4 +705,4 @@ async def resetcooldown(interaction: discord.Interaction, user: discord.User, st
     
     return await interaction.response.send_message(embed=embd, ephemeral=True)
 
-bot.run(config['token'])
+bot.run(token=os.environ.get('token'))
