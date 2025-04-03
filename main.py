@@ -9,7 +9,7 @@
 ##    https://github.com/Atluzka/account-gen-bot
 ##
 ## ##
-
+import os
 import discord, json
 from datetime import datetime
 from discord import app_commands
@@ -705,4 +705,4 @@ async def resetcooldown(interaction: discord.Interaction, user: discord.User, st
     
     return await interaction.response.send_message(embed=embd, ephemeral=True)
 
-bot.run(os.environ.get('token'))
+bot.run(token=os.environ.get('token'))
